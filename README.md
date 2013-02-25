@@ -1,0 +1,4 @@
+django-funkymetrics
+===================
+
+funky-metrics

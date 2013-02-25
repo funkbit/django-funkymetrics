@@ -9,6 +9,8 @@ django-funkymetrics is a super simple Django application for easily tracking eve
 
 ## Installation
 
+Add the KISSmetrics JS snippet to your project template(s).
+
 Install `django-funkymetrics`:
 
     pip install django-funkymetrics

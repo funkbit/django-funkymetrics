@@ -1,4 +1,9 @@
 """
+Copied from KISSmetrics sample libraries:
+https://github.com/kissmetrics/KISSmetrics/
+
+Modified to use HTTPS endpoint instead of HTTP.
+
 Example usage:
 
 km = KM('my-api-key')
@@ -13,7 +18,7 @@ from datetime import datetime
 
 class KM(object):
 
-    def __init__(self, key, host='trk.kissmetrics.com:80', http_timeout=2, logging=True):
+    def __init__(self, key, host='trk.kissmetrics.com:443', http_timeout=2, logging=True):
         self._id = None
         self._key    = key
         self._host = host
@@ -90,7 +95,7 @@ class KM(object):
             data['_p'] = self._id
 
         try:
-            connection = httplib.HTTPConnection(self._host, timeout=self._http_timeout)
+            connection = httplib.HTTPSConnection(self._host, timeout=self._http_timeout)
             connection.request('GET', '/%s?%s' % (type, urllib.urlencode(data)))
             r = connection.getresponse()
         except:

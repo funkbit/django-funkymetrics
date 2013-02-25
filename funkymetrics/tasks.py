@@ -1,7 +1,7 @@
 from celery.task import task
 from django.conf import settings
 
-from metrics.kissmetrics import KM
+from funkymetrics.kissmetrics import KM
 
 
 @task(max_retries=2, default_retry_delay=30, ignore_result=False)

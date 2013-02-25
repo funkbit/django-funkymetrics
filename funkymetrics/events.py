@@ -1,4 +1,4 @@
-from metrics import tasks
+from funkymetrics import tasks
 
 
 def record_event(request, action, props=None):

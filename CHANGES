@@ -1,0 +1,10 @@
+VERSION HISTORY
+
+0.1.0:
+
+- Initial release
+
+0.1.5:
+
+- Support for passing user instances to record_event, in
+  addition to request objects.

@@ -8,3 +8,7 @@ VERSION HISTORY
 
 - Support for passing user instances to record_event, in
   addition to request objects.
+
+0.1.6:
+
+- Minor fix

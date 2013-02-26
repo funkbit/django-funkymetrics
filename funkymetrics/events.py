@@ -23,7 +23,7 @@ def record_event(request_or_user, action, props=None):
     else:
 
         # Attempt to identify by KISSmetrics ID from cookie
-        if hasattr(request_or_user, 'COOKIES', None) is not None:
+        if hasattr(request_or_user, 'COOKIES') is not None:
             identity = request_or_user.COOKIES.get('km_ai', '')
 
     # Queue task

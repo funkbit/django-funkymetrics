@@ -12,3 +12,7 @@ VERSION HISTORY
 0.1.6:
 
 - Minor fix
+
+0.1.7:
+
+- URL-encoding properties before submitting

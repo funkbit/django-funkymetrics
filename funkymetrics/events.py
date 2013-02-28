@@ -26,6 +26,15 @@ def record_event(request_or_user, action, props=None):
         if hasattr(request_or_user, 'COOKIES') is not None:
             identity = request_or_user.COOKIES.get('km_ai', '')
 
+    # Encode as UTF-8
+    _props = None
+    if props is not None:
+        _props = {}
+        for key, val in props.items():
+            _key = unicode(key).encode('utf-8')
+            _val = unicode(val).encode('utf-8')
+            _props[_key] = _val
+
     # Queue task
     if identity != '':
-        send_event.delay(identity, action, props)
+        send_event.delay(identity, action, _props)

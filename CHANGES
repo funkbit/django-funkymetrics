@@ -20,3 +20,7 @@ VERSION HISTORY
 0.1.8:
 
 - Skip URL encoding, caused more problems than it fixed
+
+0.1.9:
+
+- Encoding payload as UTF-8

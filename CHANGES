@@ -16,3 +16,7 @@ VERSION HISTORY
 0.1.7:
 
 - URL-encoding properties before submitting
+
+0.1.8:
+
+- Skip URL encoding, caused more problems than it fixed
